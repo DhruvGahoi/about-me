@@ -8,10 +8,8 @@ interface AnimatedTextProps {
 }
 
 export default function AnimatedText({ text, delay = 0 }: AnimatedTextProps) {
-  // Split text into an array of letters
   const letters = Array.from(text)
 
-  // Variants for container
   const container = {
     hidden: { opacity: 0 },
     visible: (i = 1) => ({
@@ -20,7 +18,6 @@ export default function AnimatedText({ text, delay = 0 }: AnimatedTextProps) {
     }),
   }
 
-  // Variants for each letter
   const child = {
     visible: {
       opacity: 1,
